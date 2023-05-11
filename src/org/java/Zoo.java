@@ -19,6 +19,16 @@ public class Zoo {
 		for (int i=0; i<animalArr.length; i++) {
 			Animal anim = animalArr[i];
 			anim.verso();
+			
+			if (anim instanceof Swim) {
+				System.out.println("In its natural habitat it says:");
+				AnimalManager.faiNuotare((Swim) anim);
+				System.out.println("---------------------------------");
+			} else if (anim instanceof Fly) {
+				System.out.println("In its natural habitat it says:");
+				AnimalManager.faiVolare((Fly) anim);
+				System.out.println("---------------------------------");
+			}
 		}
 	}
 }
